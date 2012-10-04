@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Single bar chart</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .arial_14 {
+    font-size: 14px;
+  }
+  p {
+    margin: 40px 0 5px;
+    padding: 0;
+  }
+  
+  
+  /* Single Bar Chart */
+  .single-bar-chart,
+  .single-bar-chart dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .single-bar-chart {
+    width: 100%;
+    height: 9px;
+    position: relative;
+  }
+  
+  .single-bar-chart dt {
+    position: absolute;
+    right: 0;
+    font-size: 11px;
+  }
+  
+  .single-bar-chart dt:first-child {
+    right: auto;
+    left: 0;
+  }
+  
+  
+  .single-bar-chart dd {
+    position: absolute;
+    height: 100%;
+    line-height: 40px;
+    top: 15px;
+    font-weight: bold;
+  }
+  
+  .single-bar-chart .piece1 {
+    left: 0;
+    background: #4cad6d;
+    width: 100%;
+  }
+  
+  .single-bar-chart .piece2 {
+    text-indent: -100%;
+    right: 0;
+    border-left: 2px solid #fff;
+    background: #e06c6c;
+    width: 0;
+    text-align: right;
+  }
+  
+  .single-bar-chart .piece3 {
+    right: 0;
+    border-left: 2px solid #fff;
+    background: #D1D1D1;
+    width: 0;
+  }
+  
+  .single-bar-chart.nolabels dt {
+    display: none;
+  }
+  .single-bar-chart.nolabels dd {
+    top: 0;
+  }
+  .single-bar-chart.nolabels span {
+    display: none; 
+  }
+  .single-bar-chart.nolabels dd.piece2,
+  .single-bar-chart.nolabels dd.piece3 {
+    position: relative;
+    float: right;
+  }
+</style>
+</head>
+<body>
+  <p>Example of market overview bar:</p>
+
+  <dl class="single-bar-chart nolabels">
+    <dt>Bullish</dt>
+    <dd class="piece1 arial_14"><span>60%</span></dd>
+    
+    <dt>Bearish</dt>
+    <dd class="piece2 arial_14" style="width: 30%;"><span>30%</span></dd>
+    
+    <dt>Neutral</dt>
+    <dd class="piece3 arial_14" style="width: 10%;"><span>10%</span></dd>
+  </dl>
+  
+  
+  <p>Example of sentiments bar:</p>
+  
+  <dl class="single-bar-chart">
+    <dt>Bullish</dt>
+    <dd class="piece1 arial_14">70%</dd>
+    
+    <dt>Bearish</dt>
+    <dd class="piece2 arial_14" style="width: 30%;">30%</dd>
+  </dl>
+</body>
+</html>
